@@ -1,11 +1,9 @@
 {
-  "label": "root",
-  "type": "category",
-  "items": [
+  "docs": [
     {
       "type": "doc",
-      "id": "README",
-      "label": "Frontend"
+      "label": "Frontend Overview",
+      "id": "README"
     }
   ]
 }

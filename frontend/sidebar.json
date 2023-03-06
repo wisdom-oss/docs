@@ -1,0 +1,11 @@
+{
+  "label": "root",
+  "type": "category",
+  "items": [
+    {
+      "type": "doc",
+      "id": "README",
+      "label": "Frontend"
+    }
+  ]
+}

@@ -3,6 +3,6 @@
     "path": "frontend",
     "label": "Frontend",
     "description": "Some description here.",
-    "sidebar": "frontend/sidebar.json"
+    "sidebar": "sidebar.json"
   }
 ]

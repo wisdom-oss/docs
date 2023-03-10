@@ -8,6 +8,8 @@ sequenceDiagram
     participant api as Kong API Gateway
     participant auth as Authentik
     participant s as Microservice
+
+    link api: Documentation @ kong.md
     
     u->>+caddy: New API Request
     caddy->>+api: Route request
@@ -24,7 +26,4 @@ sequenceDiagram
         api-->>-caddy: send error
     end
     caddy-->>-u: response
-
-
-    
-    
+```

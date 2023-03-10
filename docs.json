@@ -4,5 +4,11 @@
     "label": "Frontend",
     "description": "Some description here.",
     "sidebar": "sidebar.json"
+  },
+  {
+    "path": "backend",
+    "label": "Backend",
+    "description": "Some description here.",
+    "sidebar": "sidebar.json"
   }
 ]

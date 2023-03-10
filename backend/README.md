@@ -1,6 +1,8 @@
 # Backend Overview
 
-The following graph shows how a request is processed by the backend
+## Request Flow
+The following graph shows how a new request is processed by the backend.
+
 ```mermaid
 sequenceDiagram
     actor u as User
@@ -9,7 +11,7 @@ sequenceDiagram
     participant auth as Authentik
     participant s as Microservice
 
-    link api: Documentation @ kong.md
+    link api: Documentation @ ./kong.md
     
     u->>+caddy: New API Request
     caddy->>+api: Route request

@@ -8,12 +8,12 @@
     {
       "type": "doc",
       "label": "Building and Customizing the Frontend Application",
-      "id": "build_customize"
+      "id": "building-and-customizing-the-frontend-application"
     },
     {
       "type": "doc",
       "label": "Minimal Example",
-      "id": "minimal_example"
+      "id": "minimal-example"
     }
   ]
 }

@@ -9,7 +9,7 @@ The example includes one module, one component and one service.
 ## Prerequisites
 
 To run and build the minimal example you should have a working instance of the 
-`workspace`, check [this](build_customize.md) on how to achieve this.
+`workspace`, check [this](building-and-customizing-the-frontend-application.md) on how to achieve this.
 
 ## Getting Started
 

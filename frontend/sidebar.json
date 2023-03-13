@@ -8,7 +8,6 @@
     {
       "type": "category",
       "label": "Build and Customize",
-      "id": "customize",
       "items": [
         {
           "type": "doc",

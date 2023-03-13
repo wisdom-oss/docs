@@ -8,7 +8,7 @@ customize it to fit your needs.
 Although building the application is designed to be kept simple, Angular is not 
 really made for a modular design, which makes the build process slightly more 
 challenging than usual. 
-To build the application, three important dependencies should be globally 
+To build the application, four important dependencies should be globally 
 installed:
 
 - **Node.js**:
@@ -54,12 +54,12 @@ Once you have cloned the repositories, you can customize the application as
 needed. 
 There are two main files that you can modify to configure your application:
 
-- `wisdom.config.ts`: 
+- [`wisdom.config.ts`](github.com/wisdom-oss/frontend-workspace/blob/main/wisdom.config.ts): 
   This TypeScript file is used to configure the entire workspace, including the 
   sidebar, authentication, and other features. 
   It can be modified to fit your specific needs and preferences.
 
-- `wisdom.modules.ts`: 
+- [`wisdom.modules.ts`](https://github.com/wisdom-oss/frontend-workspace/blob/main/wisdom.modules.ts): 
   This TypeScript file is a hack to make the `core` work with the modules with 
   as little effort as possible. 
   It is used to re-export the modules installed from `@WISdoM-OSS` or add your 

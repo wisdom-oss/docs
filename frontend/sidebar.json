@@ -32,8 +32,18 @@
       "items": [
         {
           "type": "doc",
+          "label": "Internationalization",
+          "id": "concepts/i18n"
+        },
+        {
+          "type": "doc",
           "label": "Networking",
           "id": "concepts/networking"
+        },
+        {
+          "type": "doc",
+          "label": "Routing",
+          "id": "concepts/routing"
         }
       ]
     }

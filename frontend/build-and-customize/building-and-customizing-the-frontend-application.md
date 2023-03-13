@@ -96,6 +96,37 @@ ng serve
 Now your workspace should be available at 
 [`https://localhost:4200`](https://localhost:4200).
 
+## Proxy
+
+When running the application locally, a little Webpack instance is used to proxy 
+requests to the API. 
+The configuration for the proxy is defined in the `webpack.config.js` file and 
+looks like this:
+
+```js
+module.exports = {
+  devServer: {
+    proxy: {
+      "/api/*": {
+        target: "https://wisdom-demo.uol.de",
+        changeOrigin: true,
+      },
+      "/files/*": {
+        target: "https://wisdom-demo.uol.de",
+        changeOrigin: true,
+        logLevel: "error",
+      }
+    },
+  }
+}
+```
+
+This means that any requests with the `/api/*` or `/files/*` paths will be 
+proxied to the target URL 
+[https://wisdom-demo.uol.de](https://wisdom-demo.uol.de). 
+If you need to change the target URL, you can modify it in the configuration 
+file.
+
 ## Customizing the Application
 
 To customize the application to fit your needs, it is recommended that you clone 
@@ -130,3 +161,4 @@ There are two main files that you can modify to configure your application:
   own modules, which are then imported by the 
   [`ModuleProvider`](https://github.com/wisdom-oss/frontend-core/blob/main/src/app/module-provider.ts) 
   to expose them to the routes of the `core`.
+

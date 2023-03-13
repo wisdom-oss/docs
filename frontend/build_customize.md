@@ -8,7 +8,7 @@ customize it to fit your needs.
 Although building the application is designed to be kept simple, Angular is not 
 really made for a modular design, which makes the build process slightly more 
 challenging than usual. 
-To build the application, four important dependencies should be globally 
+To build the application, some important dependencies should be globally 
 installed:
 
 - **Node.js**:
@@ -28,9 +28,64 @@ installed:
   This is required to build the application itself. 
   Once the workspace is installed, the local installation may overtake it.
 
-Once the dependencies are installed, clone the application and run the 
-`build.js` file to build the application. 
-This is the easiest route and will output static files.
+### Install Node.js
+Install yourself Node.js from their 
+[official website](https://nodejs.org/en/download/) and install it.
+You may use a package manager of your choice, just make sure you have current 
+version or the LTS listed on the Node.js website.
+
+You can check your Node version by running:
+
+```sh
+node -v
+```
+
+### Install Global CLI Tools
+
+After Node.js you also need `pnpm`, `meta` and `@angular/cli`.
+You can simply install them by running:
+
+```sh
+npm install -g pnpm meta @angular/cli
+```
+
+### Clone the Workspace
+
+Clone the workspace somewhere on your local machine:
+
+```sh
+git clone git@github.com:wisdom-oss/frontend-workspace.git
+```
+
+*Note: The link could also be forked repository.*
+
+### Update your Workspace with Meta
+
+After cloning the repository you need to clone the subrepositories, this is done 
+via meta:
+
+```sh
+meta git update
+```
+
+### Build your Workspace
+
+You can simply build your workspace via the included `build.js` file, simply run:
+
+```sh
+node build.js
+```
+
+### Serve the Workspace
+
+After that you can serve your workspace, run:
+
+```sh
+ng serve
+```
+
+Now your workspace should be available at 
+[`https://localhost:4200`](https://localhost:4200).
 
 ## Customizing the Application
 

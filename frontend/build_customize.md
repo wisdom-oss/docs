@@ -55,6 +55,7 @@ Clone the workspace somewhere on your local machine:
 
 ```sh
 git clone git@github.com:wisdom-oss/frontend-workspace.git
+cd frontend-workspace
 ```
 
 *Note: The link could also be forked repository.*
@@ -66,6 +67,14 @@ via meta:
 
 ```sh
 meta git update
+```
+
+### Install Dependencies
+
+To install the dependencies, simply run:
+
+```sh 
+pnpm install
 ```
 
 ### Build your Workspace

@@ -11,20 +11,20 @@ challenging than usual.
 To build the application, some important dependencies should be globally 
 installed:
 
-- **Node.js**:
+- [**Node.js**](https://nodejs.org):
   This is a JavaScript runtime environment required to run the Angular CLI and 
   build the application.
 
-- **pnpm**:
+- [**pnpm**](https://pnpm.io):
   This is the package manager that allows reusing dependencies. 
   While not entirely necessary for this project as all dependencies are in the 
   workspace, other WISdoM Node.js applications also use it.
 
-- **meta**: 
+- [**meta**](https://www.npmjs.com/package/meta): 
   This is a repository manager that allows cloning and commanding multiple 
   repositories at once.
 
-- **Angular CLI**: 
+- [**Angular CLI**](https://angular.io/cli): 
   This is required to build the application itself. 
   Once the workspace is installed, the local installation may overtake it.
 
@@ -43,7 +43,7 @@ node -v
 ### Install Global CLI Tools
 
 After Node.js you also need `pnpm`, `meta` and `@angular/cli`.
-You can simply install them by running:
+You can install them by running:
 
 ```sh
 npm install -g pnpm meta @angular/cli
@@ -58,7 +58,7 @@ git clone git@github.com:wisdom-oss/frontend-workspace.git
 cd frontend-workspace
 ```
 
-*Note: The link could also be forked repository.*
+*Note: The link could also be your forked repository.*
 
 ### Update your Workspace with Meta
 
@@ -71,7 +71,7 @@ meta git update
 
 ### Install Dependencies
 
-To install the dependencies, simply run:
+To install the dependencies, run:
 
 ```sh 
 pnpm install
@@ -79,7 +79,7 @@ pnpm install
 
 ### Build your Workspace
 
-You can simply build your workspace via the included `build.js` file, simply run:
+You can build your workspace via the included `build.js` file, run:
 
 ```sh
 node build.js

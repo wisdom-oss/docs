@@ -111,6 +111,6 @@ After that you can serve the files locally with:
 ng serve
 ```
 
-This will make the application available at ```https://localhost:4200```, you 
-probably need to bypass the browser security warning or add your own 
-certificate.
+This will make the application available at 
+[`https://localhost:4200`](https://localhost:4200), you probably need to bypass 
+the browser security warning or add your own certificate.

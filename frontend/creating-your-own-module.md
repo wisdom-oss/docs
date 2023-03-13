@@ -26,13 +26,36 @@ This will create a new library named `my-lib` in the `wisdom_modules` directory.
 The `my-lib` directory will contain a starter `public-api.ts` file and a `lib` 
 directory containing a sample component.
 
+
+### Import WisdomModule and TranslateModule
+
+To make use of the `core`, `common` and translations the `WisdomModule` and the 
+`TranslateModule` need to be imported into the library module.
+This should look like this:
+
+```ts
+// other imports
+import {TranslateModule} from "@ngx-translate/core";
+import {WisdomModule} from "common";
+
+@NgModule({
+  declarations: [...],
+  imports: [
+    WisdomModule,
+    TranslateModule
+  ],
+  exports: [...]
+})
+export class MyLibModule { }
+```
+
 ### Define WISdoM Interface
 
 To make your library work with the WISdoM frontend, you need to define a 
 `WisdomInterface` called `wisdomInterface` in your `public-api.ts` file. 
 
 > ⚠️ **Caution**: It is very important that the exported constant is called 
-> `wisdomInterface` as `core` module assumes specifically that name
+> `wisdomInterface` as the `core` module assumes specifically that name.
 
 This interface should include the following properties:
 

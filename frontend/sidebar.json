@@ -12,17 +12,17 @@
         {
           "type": "doc",
           "label": "Building and Customizing the Frontend Application",
-          "id": "building-and-customizing-the-frontend-application"
+          "id": "build-and-customize/building-and-customizing-the-frontend-application"
         },
         {
           "type": "doc",
           "label": "Minimal Example",
-          "id": "minimal-example"
+          "id": "build-and-customize/minimal-example"
         },
         {
           "type": "doc",
           "label": "Creating Your Own Module",
-          "id": "creating-your-own-module"
+          "id": "build-and-customize/creating-your-own-module"
         }
       ]
     }

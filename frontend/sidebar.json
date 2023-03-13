@@ -25,6 +25,17 @@
           "id": "build-and-customize/creating-your-own-module"
         }
       ]
+    },
+    {
+      "type": "category",
+      "label": "Concepts",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Networking",
+          "id": "concepts/networking"
+        }
+      ]
     }
   ]
 }

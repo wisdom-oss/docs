@@ -4,6 +4,16 @@
       "type": "doc",
       "label": "Frontend Overview",
       "id": "README"
+    },
+    {
+      "type": "doc",
+      "label": "Building and Customizing the Frontend Application",
+      "id": "build_customize"
+    },
+    {
+      "type": "doc",
+      "label": "Minimal Example",
+      "id": "minimal_example"
     }
   ]
 }

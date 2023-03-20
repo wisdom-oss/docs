@@ -44,6 +44,11 @@
           "type": "doc",
           "label": "Routing",
           "id": "concepts/routing"
+        },
+        {
+          "type": "doc",
+          "label": "Icons",
+          "id": "concepts/icons"
         }
       ]
     }

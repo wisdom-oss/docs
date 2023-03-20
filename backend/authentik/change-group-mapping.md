@@ -1,6 +1,6 @@
 <p align="center">
-<img height="75dp" src="https://github.com/goauthentik/authentik/raw/3ecc715e91ed0bb8b019d2a8fe42d0eb6531a341/web/icons/icon_left_brand.svg"><br><br>
-<img src="https://img.shields.io/badge/Importance-High-critical?style=for-the-badge">
+<img height="75dp" src="https://github.com/goauthentik/authentik/raw/3ecc715e91ed0bb8b019d2a8fe42d0eb6531a341/web/icons/icon_left_brand.svg"/><br><br>
+<img src="https://img.shields.io/badge/Importance-High-critical?style=for-the-badge"/>
 </p>
 
 # Change Group Mapping

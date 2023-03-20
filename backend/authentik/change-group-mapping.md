@@ -70,6 +70,6 @@ mapping of this user attribute needs to be changed.
         "groups": [group.name for group in request.user.ak_groups.all()],
     }
     ```
-    </detais>
+    </details>
 
 6. Save the edited mapping

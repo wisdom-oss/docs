@@ -8,7 +8,7 @@
 > 📝 TODO: Write this file
 
 1. Open the administrative UI of your authentik installation <br>
-`https://<your-authentik-binding>/if/admin/` <br>
+    `https://<your-authentik-binding>/if/admin/`
     <details>
     <summary>Click to show/hide screenshot</summary>
 

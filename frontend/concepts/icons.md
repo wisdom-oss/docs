@@ -17,7 +17,7 @@ The `common` library contains a component called `IonIconComponent`, which has
 the selector `ion-icon`. 
 It allows the easy use of IonIcons in a template. 
 Here is an example of how to use the `IonIconComponent` in an HTML template 
-using [Bulma](style-with-bulma.md):
+using [Bulma](styling-with-bulma.md):
 
 ```html
 <p class="icon-text">

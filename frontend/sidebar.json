@@ -49,6 +49,11 @@
           "type": "doc",
           "label": "Icons",
           "id": "concepts/icons"
+        },
+        {
+          "type": "doc",
+          "label": "Styling with Bulma",
+          "id": "concepts/style-with-bulma"
         }
       ]
     }

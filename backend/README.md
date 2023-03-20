@@ -14,7 +14,7 @@ file.
 > of this file may change or be temporarily unavailable.
 
 ## Kong API Gateway
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/_/kong/alpine?style=for-the-badge)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/_/kong/alpine?style=for-the-badge&label=Current%20Version%20(On%20Docker%20Hub))
 <a href="https://docs.konghq.com/gateway/latest/">![Documentation Link](https://img.shields.io/badge/External%20Docs-docs.konghq.com%2Fgateway%2Flatest%2F-informational?style=for-the-badge)</a>
 
 The Kong API Gateway is responsible for routing incoming requests to the

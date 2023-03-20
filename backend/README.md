@@ -49,3 +49,26 @@ sequenceDiagram
     caddy-->>-u: response
 ```
 </details>
+
+More information: [here](./kong/kong.md)
+
+## Authentik
+<a href="https://goauthentik.io/docs/">![Documentation Link](https://img.shields.io/badge/External%20Docs-goauthentik.io%2Fdocs-informational?style=for-the-badge&color=fd4b2d)</a>
+
+Authentik is responsible for managing the authorization for this project.
+It allows authentification and authorization via multiple providers like
+* LDAP
+* OAuth 2.0 (including Open ID Connect) (✅ used in this project)
+* SAML
+
+and even allows protecting applications that cannot use those providers via
+proxy authentification.
+
+It also allows the usage of external authentification sources like:
+* Azure AD
+* GitHub.com or a GitHub-Enterprise server
+* LDAP
+* OpenID Connect
+* SAML
+
+More information: [here](./authentik/authentik.md)

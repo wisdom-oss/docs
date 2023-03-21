@@ -10,5 +10,10 @@ installation on the following path:
 `https://<your-authentik-binding>/if/flow/initial-setup/`
 and set a password for the administrative user `akadmin`.
 
-Until the password is set the access to authentik will not be possible
+:::danger
+
+Until the password for the administrative account is not set the administrative
+UI will not be reachable
+
+:::
 

@@ -15,7 +15,8 @@ file.
 
 ## Kong API Gateway
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/_/kong/alpine?style=for-the-badge&label=Current%20Version%20(On%20Docker%20Hub))
-<a href="https://docs.konghq.com/gateway/latest/">![Documentation Link](https://img.shields.io/badge/External%20Docs-docs.konghq.com%2Fgateway%2Flatest%2F-informational?style=for-the-badge)</a>
+<a href="https://docs.konghq.com/gateway/latest/">
+<img src="https://img.shields.io/badge/External%20Docs-docs.konghq.com%2Fgateway%2Flatest%2F-informational?style=for-the-badge"/></a>
 
 The Kong API Gateway is responsible for routing incoming requests to the
 microservices after validating the authorization contained in the request at
@@ -53,7 +54,7 @@ sequenceDiagram
 More information: [here](./kong/kong.md)
 
 ## Authentik
-<a href="https://goauthentik.io/docs/">![Documentation Link](https://img.shields.io/badge/External%20Docs-goauthentik.io%2Fdocs-informational?style=for-the-badge&color=fd4b2d)</a>
+<a href="https://goauthentik.io/docs/"><img src="https://img.shields.io/badge/External%20Docs-goauthentik.io%2Fdocs-informational?style=for-the-badge&color=fd4b2d"/></a>
 
 Authentik is responsible for managing the authorization for this project.
 It allows authentification and authorization via multiple providers like

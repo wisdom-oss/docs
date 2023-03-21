@@ -20,12 +20,12 @@
             },
             {
               "type": "doc",
-              "label": "Reconfigure Group Mapping",
+              "label": "Reconfiguration for using subgroups",
               "id": "authentik/change-group-mapping"
             },
             {
               "type": "doc",
-              "label": "Create OAuth/OpenID Provider",
+              "label": "Create new OAuth/OpenID Provider",
               "id": "authentik/create-provider"
             }
           ]

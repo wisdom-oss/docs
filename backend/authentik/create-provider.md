@@ -1,5 +1,5 @@
 <p align="center">
-<img height="75dp" src="https://github.com/goauthentik/authentik/raw/3ecc715e91ed0bb8b019d2a8fe42d0eb6531a341/web/icons/icon_left_brand.svg"/><br><br>
+<img height="50dp" src="https://github.com/goauthentik/authentik/raw/3ecc715e91ed0bb8b019d2a8fe42d0eb6531a341/web/icons/icon_left_brand.svg"/><br><br>
 <img src="https://img.shields.io/badge/Importance-High-critical?style=for-the-badge"/>
 </p>
 
@@ -23,4 +23,6 @@
     </details>
 
 3. Now Create a new `OAuth2/OpenID` provider with the client type set to 
-`public`
+    `public`.
+
+4. Now set the `Client ID` in the frontend as described in the aproppriate documentation

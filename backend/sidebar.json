@@ -12,6 +12,7 @@
         {
           "type": "category",
           "label": "🚨 Post-Installation Tasks",
+          "collapsed": true,
           "items": [
             {
               "type": "doc",

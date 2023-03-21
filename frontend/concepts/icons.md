@@ -1,6 +1,6 @@
 # Icons
 
-This document outlines how to use icons in WIISdoM and provides guidance on the 
+This document outlines how to use icons in WISdoM and provides guidance on the 
 icon set used by the application.
 
 ## Icon Set

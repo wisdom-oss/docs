@@ -32,6 +32,17 @@
           ]
         }
       ]
+    },
+    {
+      "type": "category",
+      "label": "Microservices",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Creating a Microservice",
+          "id": "microserivces/use-template"
+        }
+      ]
     }
   ]
 }

@@ -3,27 +3,3 @@
 To successfully create a new microservice you need to install the current
 release of the _golang Programming Language_.
 
-<Tabs>
-<TabItem value="windows" label="Windows" default>
-
-1. Open [`https://go.dev/doc/install`](https://go.dev/doc/install) and download
-    the latest release
-2. Execute the installer and follow the steps of the installer
-3. Validate the installed version with
-    ```bash
-    go version
-    ```
-</TabItem>
-<TabItem value="winget" label="WinGet">
-
-1. Open a new Terminal on your windows machine
-2. Execute the following command:
-    ```bash
-    winget install GoLang.Go.1.20 --source winget
-    ```
-3. Validate the installed version with
-    ```bash
-    go version
-    ```
-</TabItem>
-</Tabs>

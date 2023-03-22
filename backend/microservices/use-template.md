@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Creating a new microservice
 ## Preperations
 To successfully create a new microservice you need to install the current

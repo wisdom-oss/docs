@@ -16,11 +16,6 @@
           "items": [
             {
               "type": "doc",
-              "label": "Initialize Administrator",
-              "id": "authentik/initialize-admin"
-            },
-            {
-              "type": "doc",
               "label": "Reconfiguration for using subgroups",
               "id": "authentik/change-group-mapping"
             },

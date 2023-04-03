@@ -1,9 +1,10 @@
+# Change Group Mapping
+
 <p align="center">
 <img height="75dp" src="https://github.com/goauthentik/authentik/raw/3ecc715e91ed0bb8b019d2a8fe42d0eb6531a341/web/icons/icon_left_brand.svg"/><br><br>
 <img src="https://img.shields.io/badge/Importance-High-critical?style=for-the-badge"/>
 </p>
 
-# Change Group Mapping
 Since authentik allows defining groups as members of other groups it is possible
 to create subgroups which inherit the parent group.
 The OpenID mapping for the groups does not reflect this and therefore the 

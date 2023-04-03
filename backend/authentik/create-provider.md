@@ -1,5 +1,4 @@
 ---
-id: create-oauth-provider
 title: Create a OAuth2 Provider
 ---
 

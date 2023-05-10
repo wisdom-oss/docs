@@ -4,6 +4,58 @@
       "type": "doc",
       "label": "Frontend Overview",
       "id": "README"
+    },
+    {
+      "type": "category",
+      "label": "Build and Customize",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Building and Customizing the Frontend Application",
+          "id": "build-and-customize/building-and-customizing-the-frontend-application"
+        },
+        {
+          "type": "doc",
+          "label": "Minimal Example",
+          "id": "build-and-customize/minimal-example"
+        },
+        {
+          "type": "doc",
+          "label": "Creating Your Own Module",
+          "id": "build-and-customize/creating-your-own-module"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Concepts",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Internationalization",
+          "id": "concepts/i18n"
+        },
+        {
+          "type": "doc",
+          "label": "Networking",
+          "id": "concepts/networking"
+        },
+        {
+          "type": "doc",
+          "label": "Routing",
+          "id": "concepts/routing"
+        },
+        {
+          "type": "doc",
+          "label": "Icons",
+          "id": "concepts/icons"
+        },
+        {
+          "type": "doc",
+          "label": "Styling with Bulma",
+          "id": "concepts/styling-with-bulma"
+        }
+      ]
     }
   ]
 }

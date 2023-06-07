@@ -25,8 +25,8 @@ passing through the application:
   This interceptor injects headers for caching.
 
 - `ErrorInterceptor`: 
-  This interceptor displays a big curtain if the request failed with a 5XX or 
-  4XX.
+  This interceptor either displays a big curtain or a toast notification if the 
+  request failed with a 5XX or 4XX.
 
 - `LoaderInterceptor`: 
   This interceptor enables displaying a loader curtain for long-lasting 
@@ -65,10 +65,14 @@ All the contexts are defined under `wisdom_modules/common/src/lib/http-context`.
   If `true`, the `CacheInterceptor` will inject the necessary caching headers. 
   Disable this to disable caching.
   
-- `USE_ERROR_CURTAIN`: 
-  Defaults to `true`. 
-  If `true`, the `ErrorInterceptor` will display a curtain displaying after 
-  receiving a 4XX or 5XX error, disable this for custom error handling.
+- `USE_ERROR_HANDLER`: 
+  Defaults to `USE_ERRO_HANDLER.handler.CURTAIN`.
+  Uses the enum `ErrorHandler` to decide what should happen on an error.
+  If `CURTAIN`, raise a curtain displaying the error message and covering the 
+  entire main container.
+  If `TOAST`, display a small toast notification showing the error and allowing 
+  continued use of the main container. 
+  If `CUSTOM`, the implementor should handle the error.
   
 - `USE_LOADER`: 
   Defaults to `false`. 

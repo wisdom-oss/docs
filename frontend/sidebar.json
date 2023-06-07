@@ -54,6 +54,11 @@
           "type": "doc",
           "label": "Styling with Bulma",
           "id": "concepts/styling-with-bulma"
+        },
+        {
+          "type": "doc",
+          "label": "Working with IFC Models",
+          "id": "concepts/ifc-models.md"
         }
       ]
     }

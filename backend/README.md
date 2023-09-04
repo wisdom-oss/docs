@@ -39,36 +39,11 @@ and the actions/commands listed on it!
 To make the usage unified, here are some predefined emojis with their
 meanings:
 
-<table align="center">
-<thead>
-<tr>
-<td>Emoji</td>
-<td width="100%">Description</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">🛑</td>
-<td width="100%">This step might impact the system stability</td>
-</tr>
-<tr>
-<td align="center">🦺</td>
-<td width="100%">This step might impact the system security</td>
-</tr>
-<tr>
-<td align="center">✨</td>
-<td width="100%">This step is the recommended step in a selection of steps</td>
-</tr>
-<tr>
-<td align="center">🔐</td>
-<td width="100%">This step requires administrative priviliges on the host</td>
-</tr>
-<tr>
-<td align="center">🚧</td>
-<td width="100%">This step is still a work in progress and may not behave as expected</td>
-</tr>
-<tr>
-<td align="center">⌛</td>
-<td width="100%">This step may take a while to complete depending on your host</td>
-</tbody>
-</table>
+| **Emoji** | **Description**                                                      |
+|-----------|----------------------------------------------------------------------|
+| 🛑        | This step might impact the system stability                          |
+| 🦺        | This step might impact the system security                           |
+| ✨         | This step is the recommended step in a selection of steps            |
+| 🔐        | This step requires administrative priviliges on the host             |
+| 🚧        | This step is still a work in progress and may not behave as expected |
+

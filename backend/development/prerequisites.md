@@ -1,4 +1,4 @@
-# Development Prerequisites
+# Prepare your development environment
 This document outlines the steps required to develop and build a new 
 microservice using the template microservice.
 

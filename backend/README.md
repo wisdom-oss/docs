@@ -7,7 +7,7 @@ containing the following major core parts:
   [PostGIS extentsion](https://postgis.net/)
 * [Service Detection](https://github.com/wisdom-oss/gateway-service-watcher)
 
-These three parts manage the routing and authentification for the microservices
+These four parts manage the routing and authentification for the microservices
 behind the API gateway.
 
 ## Architecture

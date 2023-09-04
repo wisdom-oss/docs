@@ -4,40 +4,10 @@
       "type": "doc",
       "label": "Backend Overview",
       "id": "README"
-    },
-    {
-      "type": "category",
-      "label": "Authentik",
-      "items": [
-        {
-          "type": "category",
-          "label": "🚨 Post-Installation Tasks",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "label": "Reconfiguration for using subgroups",
-              "id": "authentik/change-group-mapping"
-            },
-            {
-              "type": "doc",
-              "label": "Create new OAuth/OpenID Provider",
-              "id": "authentik/create-provider"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Microservices",
-      "items": [
-        {
-          "type": "doc",
-          "label": "Creating a Microservice",
-          "id": "microservices/use-template"
-        }
-      ]
+    }, {
+      "type": "doc",
+      "label": "Deployment",
+      "id": "deployment"
     }
   ]
 }

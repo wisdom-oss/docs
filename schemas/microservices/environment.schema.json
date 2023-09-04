@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://wisdom-demo.uol.de/environment.schema.json",
+    "title": "Microservice Environment Configuration",
+    "description": "A configuration layout for setting the needed and optional environment variables",
+    "type": "object",
+    "properties": {
+        "required": {
+            "description": "a list of required environment variables",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "optional": {
+            "description": "a object containing the environment variable as key and the default value as value",
+            "type": "object"
+        }
+    }
+  }

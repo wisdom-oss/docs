@@ -1,75 +1,74 @@
 # Backend Overview
-The Backend consists of three major parts:
- * [Kong API Gateway](kong.md) 
-   ([ext. Website](https://docs.konghq.com/gateway/latest/))
- * [Authentik](authentik.md) 
-   ([ext. Website](https://goauthentik.io/docs/))
- * [Microservices](microservices.md)
+The backend of the WISdoM project is designed as microservice architecture
+containing the following major core parts:
+* [authentik](https://goauthentik.io)
+* [Kong API Gateway](https://docs.konghq.com/gateway/latest/)
+* [Postres](https://www.postgresql.org/) with the 
+  [PostGIS extentsion](https://postgis.net/)
+* [Service Detection](https://github.com/wisdom-oss/gateway-service-watcher)
 
-All three parts and their dependencies are running in Docker Containers managed
-by [Docker Compose](https://docs.docker.com/compose/) using a 
-[docker-compose.yml](https://github.com/wisdom-oss/deployment/blob/main/docker-compose.yml)
-file.
-> 🚨 The linked `docker-compose.yml` file is currently under rework. The content
-> of this file may change or be temporarily unavailable.
+These three parts manage the routing and authentification for the microservices
+behind the API gateway.
 
-## Kong API Gateway
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/_/kong/alpine?style=for-the-badge&label=Current%20Version%20(On%20Docker%20Hub))
-<a href="https://docs.konghq.com/gateway/latest/">
-<img src="https://img.shields.io/badge/External%20Docs-docs.konghq.com%2Fgateway%2Flatest%2F-informational?style=for-the-badge"/></a>
+## Architecture
+As already mentioned, the backend is constructed as microservice archtecture
+allowing the creation of multiple instances of one service if a large number
+of requests are exprected for this single service.
 
-The Kong API Gateway is responsible for routing incoming requests to the
-microservices after validating the authorization contained in the request at
-the authentik service.
+## Deployment
+To allow a unified deployment of the core project (the frontend, and the listed
+core parts) the project uses [Docker](https://www.docker.com) together with 
+[Docker Compose](https://docs.docker.com/compose/) as deployment mechanism.
 
-<details>
-<summary> Example Request Flow</summary>
+[_Read more_](./deployment.md)
 
-```mermaid
-sequenceDiagram
-    actor u as User
-    participant caddy as Http Entrypoint
-    participant api as Kong API Gateway
-    participant auth as Authentik
-    participant s as Microservice
-    
-    u->>+caddy: New API Request
-    caddy->>+api: Route request
-    critical Get Userinfo
-        api->>+auth: Get /userinfo
-        auth-->>-api: userinfo    
-    end
-    api-->api: Check authorization
-    alt valid autorization
-        api->>+s: Route request
-        s-->s: Handle Request
-        s-->>-api: response
-    else invalid authorization
-        api-->>-caddy: send error
-    end
-    caddy-->>-u: response
-```
-</details>
+## Microservices
+Since the selected architecture is a microservice architecture, the creation of
+a new microservice is pretty straightforward. Just use the 
+[template](https://github.com/wisdom-oss/microservice-template) for writing
+a service in [Golang](https://go.dev).
 
-More information: [here](./kong/kong.md)
+[_Read more_](./development/README.md)
 
-## Authentik
-<a href="https://goauthentik.io/docs/"><img src="https://img.shields.io/badge/External%20Docs-goauthentik.io%2Fdocs-informational?style=for-the-badge&color=fd4b2d"/></a>
+## Notes
+### Emojis
+Throughout the backend documentation, emojis are used to mark important steps
+and notes.
+If an emoji appears at the top of a page, the emoji is valid for the whole page
+and the actions/commands listed on it!
+To make the usage unified, here are some predefined emojis with their
+meanings:
 
-Authentik is responsible for managing the authorization for this project.
-It allows authentification and authorization via multiple providers like
-* LDAP
-* OAuth 2.0 (including Open ID Connect) (✅ used in this project)
-* SAML
-
-and even allows protecting applications that cannot use those providers via
-proxy authentification.
-
-It also allows the usage of external authentification sources like:
-* Azure AD
-* GitHub.com or a GitHub-Enterprise server
-* LDAP
-* OpenID Connect
-* SAML
-
-More information: [here](./authentik/authentik.md)
+<table align="center">
+<thead>
+<tr>
+<td>Emoji</td>
+<td width="100%">Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">🛑</td>
+<td width="100%">This step might impact the system stability</td>
+</tr>
+<tr>
+<td align="center">🦺</td>
+<td width="100%">This step might impact the system security</td>
+</tr>
+<tr>
+<td align="center">✨</td>
+<td width="100%">This step is the recommended step in a selection of steps</td>
+</tr>
+<tr>
+<td align="center">🔐</td>
+<td width="100%">This step requires administrative priviliges on the host</td>
+</tr>
+<tr>
+<td align="center">🚧</td>
+<td width="100%">This step is still a work in progress and may not behave as expected</td>
+</tr>
+<tr>
+<td align="center">⌛</td>
+<td width="100%">This step may take a while to complete depending on your host</td>
+</tbody>
+</table>

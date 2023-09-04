@@ -4,10 +4,22 @@
       "type": "doc",
       "label": "Backend Overview",
       "id": "README"
-    }, {
+    }, 
+    {
       "type": "doc",
       "label": "Deployment",
       "id": "deployment"
+    },
+    {
+      "type": "category",
+      "label": "Development",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Prerequisites",
+          "id": "development/prerequisites"
+        }
+      ]
     }
   ]
 }

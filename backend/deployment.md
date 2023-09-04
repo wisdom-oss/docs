@@ -1,11 +1,11 @@
 # Deployment
 <div align="center">
 <p>
-<span style="font-size:1.5rem;">🔐</span>
+<span>🔐</span>
 All steps require administrative priviliges on the host machine to work
 </p>
 <p>
-<span style="font-size:1.5rem;">🦺</span>
+<span>🦺</span>
 In its default configuration, Docker modifies the iptables to allow port 
 publishing. The modifications bypass the iptables set by firewall applications.
 Take care when opening up ports!

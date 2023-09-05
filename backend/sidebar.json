@@ -12,14 +12,73 @@
     },
     {
       "type": "category",
+      "label": "Authentication/Authorization",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Overview",
+          "id": "authentication/README"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "API Gateway",
+      "items": [
+        {
+          "type": "doc",
+          "label": "Overview",
+          "id": "gateway/README"
+        },
+        {
+          "type": "doc",
+          "label": "Authentication",
+          "id": "gateway/authentication"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Development",
       "items": [
         {
           "type": "doc",
+          "label": "Overview",
+          "id": "development/README"
+        },
+        {
+          "type": "doc",
           "label": "Prerequisites",
           "id": "development/prerequisites"
+        },
+        {
+          "type": "doc",
+          "label": "Create your own microservice",
+          "id": "development/develop-your-own-microservice"
+        },
+        {
+          "type": "category",
+          "label": "Concepts",
+          "items": [
+            {
+              "type": "doc",
+              "label": "Middlewares",
+              "id": "development/concepts/middlewares"
+            },
+            {
+              "type": "doc",
+              "label": "Error Handling",
+              "id": "development/concepts/error-handling"
+            },
+            {
+              "type": "doc",
+              "label": "Contexts",
+              "id": "development/concepts/context"
+            }
+          ]
         }
       ]
     }
+    
   ]
 }

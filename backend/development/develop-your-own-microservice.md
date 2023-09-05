@@ -58,4 +58,4 @@ go get -u
 ```
 
 🎉 Now all packages used in the microservice are up to date and the development
-may start, as all preperations are done.
+may start, as all preparations are done.

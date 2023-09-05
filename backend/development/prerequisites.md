@@ -2,7 +2,7 @@
 This document outlines the steps required to develop and build a new 
 microservice using the template microservice.
 
-## Prerequesites
+## Prerequisites
 To be able to develop a new microservice you need the following software on your
 development machine:
 * [Golang](https://go.dev): This is the programming language in which the microservices are 
@@ -12,7 +12,7 @@ development machine:
     to databases that are running on remote hosts, if the WISdoM platform
     already has been [deployed](../deployment.md).
 
-Furhtermore, you need a code editor or IDE (e.g. 
+Furthermore, you need a code editor or IDE (e.g. 
 [Visual Studio Code](https://code.visualstudio.com/) or 
 [GoLand](https://www.jetbrains.com/go/)) that optionally support syntax
 highlighting or other convenience features.

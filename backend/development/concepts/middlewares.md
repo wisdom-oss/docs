@@ -30,10 +30,10 @@ used:
 > The inner workings of these middlewares will not be discussed here. However, the
 > code for each middleware is available in [this repository](https://github.com/go-chi/chi/tree/master/middleware)
 
-## Custom Middlewares
-### Preimplemented Middlewares
+## Custom Middleware
+### Pre-implemented Middleware
 Since every microservice needs some core functionalities implemented in the same
-way to allow a consistent output in some matters, there are three preimplemented
+way to allow a consistent output in some matters, there are three pre-implemented
 middlewares available:
 
 * [`wisdomMiddleware.Authorization`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#Authorization) 
@@ -43,16 +43,51 @@ middlewares available:
     default middlewares.<br/>
     _[Read more](./authorization.md)_
 
-* [`wisdomMiddleare.NativeErrorHandler`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#NativeErrorHandler) 
+* [`wisdomMiddleware.NativeErrorHandler`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#NativeErrorHandler) 
     This middleware adds two channels to the requests context that enable the
     handling of a native golang error by putting them into one of the channels
     while listening on the completion on another one.<br/>
     _[Read more](./error-handling.md)_    
 
-* [`wisdomMiddleare.WISdoMErrorHandler`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#WISdoMErrorHandler) 
+* [`wisdomMiddleware.WISdoMErrorHandler`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#WISdoMErrorHandler) 
     This middleware adds two channels to the requests context that enable the
     handling of custom predefined errors.<br/>
     _[Read more](./error-handling.md)_   
 
 ### Writing yor own middleware
-🚧🚧🚧🚧 This is a work in progress!
+Since a microservice may make use of a customized middleware, you may also
+write your own middlewares.
+Since middlewares are acting on all requests, make sure that the middleware
+you are about to write is applicable for all requests. 
+An example of a middleware that fits this criteria is a middleware generating
+a cache key that is attached to the requests [context](./context.md) which
+then is used to check a cache (e.g. Redis) if a value with this key exists and
+returns the cached response.
+
+When implementing your middleware it needs to return a function implementing the
+[`http.Handler`](https://pkg.go.dev/net/http#Handler) interface. 
+The easiest way to achieve this is to use the following way of writing your 
+middleware.
+```go
+// MyMiddleware ...
+func MyMiddleware(next http.Handler) http.Handler {
+    // the parameter next is the next handler that shall be executed after this
+    // middleware. This may be another middleware or a request handler. There
+    // is no way to detect this!
+    
+    // now create a new function
+    fn := func(w http.ResponseWriter, r *http.Request) {
+        // TODO: Implement your middleware here
+
+        // call the next handler if no response has been returned by the
+        // middleware
+        next.ServeHTTP(w,r)
+    }
+
+    // now make the function a http.Handler and return this handler
+    return http.HandlerFunc(fn)
+}
+```
+With this way of coding you are able to create your own middlewares pretty fast.
+For advanced pattern like supplying arguments to your middleware you could look
+up how the middlewares in the `go-chi/chi` package are implemented.

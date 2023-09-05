@@ -2,7 +2,7 @@
 <div align="center">
 <p>
 <span>🔐</span>
-All steps require administrative priviliges on the host machine to work
+All steps require administrative privileges on the host machine to work
 </p>
 <p>
 <span>🦺</span>
@@ -24,8 +24,8 @@ core parts) the project uses [Docker](https://www.docker.com) together with
 > (WSL) is not supported by these instructions as they may need anther syntax
 > or may not even support Docker out-of-the-box_
 
-## Prerequesites
-This section will be used to install the following prerequesites:
+## Prerequisites
+This section will be used to install the following prerequisites:
 * Docker
 * Docker Compose
 * Git
@@ -38,7 +38,7 @@ There are two ways to install docker on your machine:
 #### Using the convenience script
 
 > 🛑🦺 Executing scripts from an untrusted source may result in a
-> broken system configuration as well as secutiry vulnerabilities by installed
+> broken system configuration as well as security vulnerabilities by installed
 > packages or the contained commands.
 >
 > _Always verify the contents of a script by reading through it. If you don't
@@ -46,12 +46,12 @@ There are two ways to install docker on your machine:
 
 The first is the 
 [convenience script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) 
-created by docker to allow a realatively easy installation that may be used for
+created by docker to allow a relatively easy installation that may be used for
 development environments or newcomers that do not feel secure enough around the
 terminal.
 
 Please go to the documentation about the convenience script for further
-information on the usage and prerequesites
+information on the usage and prerequisites
 
 [_External Documentation_](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
 
@@ -86,7 +86,7 @@ package index once using the following command:
 apt-get update
 ```
 
-Now install the following packages, that allow the usage of the signingkey used
+Now install the following packages, that allow the usage of the signing key used
 to digitally sign the packages in the repository, to make sure that the
 packages downloaded from the repository are in fact from Docker Inc.:
 * `ca-certificates`
@@ -102,7 +102,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/
 chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
-Now add the repositroy to the known repositories of APT
+Now add the repository to the known repositories of APT
 ```sh
 echo \
   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -182,7 +182,7 @@ git clone https://github.com/wisdom-oss/deployment.git
 ### Generate a configuration file
 
 > 🛑🦺 Executing scripts from an untrusted source may result in a
-> broken system configuration as well as secutiry vulnerabilities by installed
+> broken system configuration as well as security vulnerabilities by installed
 > packages or the contained commands.
 >
 > _Always verify the contents of a script by reading through it. If you don't
@@ -195,15 +195,15 @@ script contained in the repository
 bash ./generate_config.sh
 ```
 
-If needed you may edit the generated `wisdom.conf` file using your favourite
+If needed you may edit the generated `wisdom.conf` file using your favorite
 console text editor (e.g `nano`, `vim`)
 
 ### Configure the Authentification Platform
-> 🛑 If the authentification platform is not configured the WISdoM platform 
+> 🛑 If the authentication platform is not configured the WISdoM platform 
 > will not work correctly!
 
-Since the authentification platform requires some configuration before it works
-correctly, start up just the authentification platform for configuration.
+Since the authentication platform requires some configuration before it works
+correctly, start up just the authentication platform for configuration.
 
 ```sh
 docker compose --profile authentik-config up -d
@@ -269,10 +269,10 @@ platform.
     ```
 
 #### Create a OAuth 2.0/OpenID Connect provider and application for the frontend
-To allow the frontend to use the authentification platform for logging in,
+To allow the frontend to use the authentication platform for logging in,
 a OAuth 2.0/OpenID Connect provider is required.
-Furhtermore, an application entry is required to activate the provider and let
-the authentification platform manage access the the application.
+Furthermore, an application entry is required to activate the provider and let
+the authentication platform manage access the the application.
 
 ##### Creating a OAuth 2.0/OpenID Connect provider
 > 🦺 Since the frontend runs in a browser and therefore is considered a public
@@ -285,10 +285,11 @@ the authentification platform manage access the the application.
    `.*`
 5. Save the new provider
 
-##### Creating a new appliction entry
+##### Creating a new application entry
+
 > 🛑 Make sure to select the correct provider, if there are multiple providers
 > available. If the wrong provider is selected, the platform will generate
-> authentification errors
+> authentication errors
 
 1. Navigate to the Administrative UI `http://<machine-ip-or-hostame>:9000/if/admin`
 2. Open the `Applications` menu and select `Applications`
@@ -353,9 +354,9 @@ After about 2-3 minutes the frontend will be accessible under the bindings
 set up while generating the configuration file.
 
 <!-- Footnotes below this point -->
-[^1]: PPA is an acroynm for a Personal Package Archive. These type of archives
+[^1]: PPA is an acronym for a Personal Package Archive. These type of archives
       are directly maintained by the developers publishing the packages 
       available in them. _However, packages installed from them are not from
-      official sources any may impact the stablility of your system. Use with
+      official sources any may impact the stability of your system. Use with
       care!_
     

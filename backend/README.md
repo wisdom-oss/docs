@@ -30,6 +30,35 @@ a service in [Golang](https://go.dev).
 
 [_Read more_](./development/README.md)
 
+## Request flow
+
+This sequence diagram tries to show the default flow of a request in the
+WISdoM platform. It removes some steps like the determination of a route in
+a participant to make the flow better comprehensible 
+
+```mermaid
+sequenceDiagram
+  
+  actor u as User
+  participant c as Caddy
+  participant g as API Gateway
+  participant a as Authentication Portal
+  participant s as Microservice
+
+  u->>c: [request]
+  c->>g: forward the request
+  g->>a: check authorization information
+  a->>g: [user information]
+  g->>g: attach user information
+  g->>s: forward request with user information
+  s->>s: handle request
+  s->>g: [response]
+  g->>c: [response]
+  c->>u: [response]
+```
+> If the user is not authenticated, the gateway responds with an error message 
+> to let the user know that he needs authentication for the request.
+
 ## Notes
 ### Emojis
 Throughout the backend documentation, emojis are used to mark important steps

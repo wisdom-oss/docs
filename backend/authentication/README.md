@@ -1,7 +1,7 @@
 <div align="center">
 <a href="https://goauthentik.io">
 <img width="350px" src="https://raw.githubusercontent.com/goauthentik/authentik/main/web/icons/icon_left_brand.svg"/>
-<a/>
+</a>
 </div>
 
 # Authentication Management

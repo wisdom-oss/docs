@@ -39,6 +39,11 @@
           "type": "doc",
           "label": "Authentication",
           "id": "gateway/authentication"
+        },
+        {
+          "type": "doc",
+          "label": "Service Discovery",
+          "id": "gateway/service-discovery"
         }
       ]
     },
@@ -74,11 +79,6 @@
               "type": "doc",
               "label": "Error Handling",
               "id": "development/concepts/error-handling"
-            },
-            {
-              "type": "doc",
-              "label": "Contexts",
-              "id": "development/concepts/context"
             }
           ]
         }

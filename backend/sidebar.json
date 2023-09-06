@@ -18,6 +18,11 @@
           "type": "doc",
           "label": "Overview",
           "id": "authentication/README"
+        },
+        {
+          "type": "doc",
+          "label": "Microservices",
+          "id": "authentication/microservice"
         }
       ]
     },

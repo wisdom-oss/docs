@@ -4,8 +4,9 @@ title: Authentication Management
 
 <div align="center">
 <a href="https://goauthentik.io">
-<img width="350px" src="https://raw.githubusercontent.com/goauthentik/authentik/main/web/icons/icon_left_brand.svg"/>
+<img height="150px" src="https://raw.githubusercontent.com/goauthentik/authentik/main/web/icons/icon_left_brand.svg"/>
 </a>
+<hr/>
 </div>
 
 The WISdoM platform utilizes authentik as a single sign-on solution for the

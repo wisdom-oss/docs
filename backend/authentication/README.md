@@ -55,4 +55,4 @@ let the microservice know who accesses it.
 
 Read more about the authorization in microservices [here](./microservice.md)
 
-Read more about the authentication in the api gateway [here](../gateway/authorization.md)
+Read more about the authentication in the api gateway [here](../gateway/authentication.md)

@@ -4,5 +4,11 @@
     "label": "Frontend",
     "description": "Documentation that describes the WISdoM frontend application and provides information about how to build, customize and deploy it. It covers a range of topics including project structure, configuration, modules, i18n, routing, styling with Bulma and more...",
     "sidebar": "sidebar.json"
+  },
+  {
+    "path": "backend",
+    "label": "Backend",
+    "description": "Some description here.",
+    "sidebar": "sidebar.json"
   }
 ]

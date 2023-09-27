@@ -69,14 +69,14 @@ WISdoM incorporates a few custom helpers to enhance functionality.
 Since Bulma is a CSS-only library, some helpers necessitate the implementation 
 through JavaScript and are thus not inherently part of Bulma.
 
-#### .is-toggleable
+### .is-toggleable
 
 The `.is-toggleable` helper is provided by the `common` package via the 
 `BulmaIsToggleableDirective`. 
 This helper allows elements to toggle the visibility class, making it especially 
 handy for interactive components like dropdowns.
 
-##### Example
+#### Example
 
 ```html
 <div class="dropdown is-toggleable">

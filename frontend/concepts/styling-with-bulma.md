@@ -59,3 +59,66 @@ This template demonstrates how Bulma can be used to create a simple card with a
 header, image, and content. 
 The `card` class is one of the many classes provided by Bulma. 
 Bulma also provides classes for colors, sizes, and spacing, among other things.
+
+## Additional Bulma Helpers
+
+In addition to the standard helpers provided by
+[Bulma](https://bulma.io/documentation/helpers/)
+for defining Color, Spacing, Typography, Visibility, Flexbox, and more,
+WISdoM incorporates a few custom helpers to enhance functionality.
+Since Bulma is a CSS-only library, some helpers necessitate the implementation 
+through JavaScript and are thus not inherently part of Bulma.
+
+#### .is-toggleable
+
+The `.is-toggleable` helper is provided by the `common` package via the 
+`BulmaIsToggleableDirective`. 
+This helper allows elements to toggle the visibility class, making it especially 
+handy for interactive components like dropdowns.
+
+##### Example
+
+```html
+<div class="dropdown is-toggleable">
+  <div class="dropdown-trigger">
+    <button class="button">
+      <span>Toggle</span>
+    </button>  
+  </div>
+  <div class="dropdown-menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">Item</a>
+    </div>
+  </div>
+</div>
+```
+
+In this simplified example, clicking the button will toggle the visibility of 
+the dropdown menu through the application of the `.is-toggleable` helper.
+
+### .is-auto-hide
+
+The `.is-auto-hide` helper is provided by the `core`.
+It facilitates the automatic removal of the visibility class from elements when 
+a click is detected outside the element, effectively hiding the element.
+This helper can be located in the `AppComponent` of the `core`.
+
+#### Example
+
+```html
+<div class="dropdown is-auto-hide">
+  <div class="dropdown-trigger">
+    <button class="button">
+      <span>Auto Hide</span>
+    </button>
+  </div>
+  <div class="dropdown-menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">Item</a>
+    </div>
+  </div>
+</div>
+```
+
+In this instance, the dropdown menu will automatically hide when a click is 
+detected outside of it, thanks to the `.is-auto-hide` helper.

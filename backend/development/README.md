@@ -8,11 +8,11 @@ manner.
 
 ## Connecting to services running on a remote host
 > If you need to connect to another microservice, please use the API gateway and
-> generate a access token via the web interface. The port forwarding described 
+> generate an access token via the web interface. The port forwarding described 
 > here is only applicable to services like databases and message brokers.
 >
-> A guide on how to generate a access token via the browser is detailed 
-> [here](./generate-api-token)
+> A guide on how to generate an access token via the browser is detailed 
+> [here](./generate-api-token).
 
 To connect your microservice to a service running on a remote host it is
 recommended to use SSH to connect to the remote host and use port forwarding
@@ -20,7 +20,7 @@ to allow your local machine to accept traffic on a port which then is forwarded
 to the selected port on the remote machine.
 
 > ✨ To make SSH connections more secure and to "skip" the step of entering a
-> password every time, you should generate a SSH key and use this to connect to
+> password every time, you should generate an SSH key and use this to connect to
 > your remote host.
 
 > 🦺 Verify the host you are connecting to. If you create a port forwarding to
@@ -35,7 +35,7 @@ Since the database container has no public port sharing configured by default,
 it is impossible to access the database while developing a new microservice 
 which uses the database.
 
-To access the database from a remote host, you need to use SSH Port Forwarding
+To access the database from a remote host, you need to use SSH port forwarding
 to route a port from your machine to the remote host on which the platform is
 installed.
 
@@ -55,7 +55,7 @@ ssh -L 6379:127.0.0.1:6379  $USER@$REMOTE_HOST
 ```
 
 ### Miscellaneous Ports
-If you microservice utilized the any other software that is hosted on a
+If your microservice utilized any other software that is hosted on a
 different machine without any ports published, you may use the following
 syntax to forward the port from the remote host to your local machine:
 ```sh

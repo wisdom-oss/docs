@@ -4,16 +4,16 @@ containing the following major core parts:
 * [authentik](https://goauthentik.io)
 * [Kong API Gateway](https://docs.konghq.com/gateway/latest/)
 * [Postres](https://www.postgresql.org/) with the 
-  [PostGIS extentsion](https://postgis.net/)
+  [PostGIS extension](https://postgis.net/)
 * [Service Detection](https://github.com/wisdom-oss/gateway-service-watcher)
 
-These four parts manage the routing and authentification for the microservices
+These four parts manage the routing and authentication for the microservices
 behind the API gateway.
 
 ## Architecture
-As already mentioned, the backend is constructed as microservice archtecture
+As already mentioned, the backend is constructed as microservice architecture
 allowing the creation of multiple instances of one service if a large number
-of requests are exprected for this single service.
+of requests are expected for this single service.
 
 ## Deployment
 To allow a unified deployment of the core project (the frontend, and the listed
@@ -73,6 +73,6 @@ meanings:
 | 🛑        | This step might impact the system stability                          |
 | 🦺        | This step might impact the system security                           |
 | ✨         | This step is the recommended step in a selection of steps            |
-| 🔐        | This step requires administrative priviliges on the host             |
+| 🔐        | This step requires administrative privileges on the host             |
 | 🚧        | This step is still a work in progress and may not behave as expected |
 

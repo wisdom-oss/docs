@@ -13,7 +13,7 @@ It checks the docker host for containers that have the following labels set:
 * `wisdom-oss.service.upstream-name`
 * `wisdom-oss.service.healthcheck`
 
-If the scanner finds a container it is inspected further and afterwards either
+If the scanner finds a container it is inspected further and afterward either
 registered on the gateway or removed from the gateway, depending on the current
 state.
 

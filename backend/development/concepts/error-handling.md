@@ -36,9 +36,9 @@ if err != nil {
 ```
 
 
-## Handling a native error
+## Handling a Native Error
 After the basics gave an overview on how errors work in Go, this section will
-now discuss, how do I even handle an error if a function returned one.
+now discuss, how to even handle an error if a function returned one.
 
 Before the error can be handled, the channels inserted by the middleware need
 to be retrieved in the handler you are about to encounter possible errors in
@@ -107,14 +107,14 @@ func MyHandler(w http.ResponseWriter, r *http.Request) {
 > ⚠️ This example will not work if the code is just copied from these 
 > instructions
 
-## Handling custom errors
+## Handling Custom Errors
 > ⚠️ Do not create custom errors for errors that can be handled using the native
 > error handler
 
-Since not only internal errors while using other functions can occur in your
+Since not only internal errors, while using other functions, can occur in your
 microservice, there is a second type of errors that have a middleware to handle
 them.
-These are errors that may occur due to non internal reasons like a request
+These are errors that may occur due to non-internal reasons like a request
 missing some parameters or is otherwise malformed.
 To allow an easy handling of these type of errors the 
 [`wisdomMiddleware.WISdoMErrorHandler`](https://pkg.go.dev/github.com/wisdom-oss/microservice-middlewares/v2#WISdoMErrorHandler)
@@ -145,7 +145,7 @@ been defined is the same as when handling a native error, **however** this time
 the code of the error is sent into the channel.
 ```go
 func MyHandler(w http.ResponseWriter, r *http.Request) {
-    // get the error channel for native errors
+    // get the error channel for custom errors
     wisdomErrorHandler := r.Context().Value("wisdomErrorChannel").(chan string)
     // get the channel that will indicate that an error has been handled
     wisdomErrorHandled := r.Context().Value("wisdomErrorHandled").(chan bool)

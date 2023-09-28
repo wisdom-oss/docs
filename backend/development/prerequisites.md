@@ -1,4 +1,4 @@
-# Prepare your development environment
+# Prepare Your Development Environment
 This document outlines the steps required to develop and build a new 
 microservice using the template microservice.
 
@@ -34,5 +34,5 @@ go version
 Download and install Git from their 
 [official website](https://git-scm.com/downloads) and follow their instructions.
 
-🎉 That's it, now you are ready to start developing an microservice on your
+🎉 That's it, now you are ready to start developing a microservice on your
 machine

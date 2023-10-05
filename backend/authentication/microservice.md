@@ -1,10 +1,9 @@
-# Authentication/Authorization for microservices
+# Authentication/Authorization for Microservices
 
-The microservices running in the backend of the WISdoM platform generally can
-enforce two types of authorization and authentication.
-The first one being that the user only needs to  be authenticated and the 
-second one being that the user needs to be explicitly authorized to use the 
-microservice.
+The microservices operating in the backend of the WISdoM platform typically 
+implement two distinct methods for user access control. 
+The first method requires only user authentication, while the second 
+requires explicit user authorization to utilize the microservice.
 
 If the microservice only requires the user to be authenticated, it will allow
 every request that has passed the API gateway and the [there configured 
@@ -30,14 +29,14 @@ a status `400 Bad Request`, since the user header is not existing.
 The `X-WISdoM-Admin` header defines, if a user is currently marked as an
 administrator in the identity provider. If the value of the header, matches the
 username set in `X-WISdoM-User` the microservice will allow the access to the
-microservice, without regard the the groups of the user requesting data from
+microservice, without regarding the groups of the user requesting data from
 the microservice.
 > This only applies if the microservice enforces authorization
 
-## Configure the microservice
+## Configure the Microservice
 The authentication/authorization of microservices is directly configured by the
 `resources/authConfig.json` file in the microservice. Per default the template
-service is configured only require authentication, not authorization.
+service is configured to only require authentication, not authorization.
 
 To require users to be authorized for the service, you need to set the value
 of `requireAuthorization` to `true`. Furthermore, you need to specify the groups

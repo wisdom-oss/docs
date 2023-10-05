@@ -6,7 +6,7 @@ handler function written to actually handle the request and are utilized in the
 WISdoM project to enable a more unified code base between services.
 
 ## Default Middlewares
-By default the following middlewares included in the `go-chi/chi` package are
+By default, the following middlewares included in the `go-chi/chi` package are
 used:
 * [`go-chi/chi/middleware.RealIP`](https://pkg.go.dev/github.com/go-chi/chi/middleware#RealIP)
     This middleware sets the remote address of the http request to the value of
@@ -14,7 +14,7 @@ used:
     loggers to see the real ip of the request.
 
 * [`go-chi/chi/middleware.RequestID`](https://pkg.go.dev/github.com/go-chi/chi/middleware#RequestID)
-    This middleware adds an request ID to every request that allows the
+    This middleware adds a request ID to every request that allows the
     identification of the request in logs and allows to identify the container
     and process that handled the request.
 
@@ -31,7 +31,7 @@ used:
 > code for each middleware is available in [this repository](https://github.com/go-chi/chi/tree/master/middleware)
 
 ## Custom Middleware
-### Pre-implemented Middleware
+### Pre-Implemented Middleware
 Since every microservice needs some core functionalities implemented in the same
 way to allow a consistent output in some matters, there are three pre-implemented
 middlewares available:
@@ -54,12 +54,12 @@ middlewares available:
     handling of custom predefined errors.<br/>
     _[Read more](./error-handling.md)_   
 
-### Writing yor own middleware
+### Writing Your Own Middleware
 Since a microservice may make use of a customized middleware, you may also
 write your own middlewares.
 Since middlewares are acting on all requests, make sure that the middleware
 you are about to write is applicable for all requests. 
-An example of a middleware that fits this criteria is a middleware generating
+An example of a middleware that fits these criteria is a middleware generating
 a cache key that is attached to the requests [context](./context.md) which
 then is used to check a cache (e.g. Redis) if a value with this key exists and
 returns the cached response.

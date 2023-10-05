@@ -2,7 +2,7 @@
 <div align="center">
 <p>
 <span>🔐</span>
-All steps require administrative privileges on the host machine to work
+All steps require administrative privileges on the host machine to work.
 </p>
 <p>
 <span>🦺</span>
@@ -21,8 +21,8 @@ core parts) the project uses [Docker](https://www.docker.com) together with
 > are supported.
 >
 > _Using a different operating system or using the Windows Subsystem for Linux
-> (WSL) is not supported by these instructions as they may need anther syntax
-> or may not even support Docker out-of-the-box_
+> (WSL) is not supported by these instructions as they may need another syntax
+> or may not even support Docker out-of-the-box._
 
 ## Prerequisites
 This section will be used to install the following prerequisites:
@@ -35,7 +35,7 @@ There are two ways to install docker on your machine:
 1. Using the convenience script
 2. ✨ Manually adding the package repository and installing the packages
 
-#### Using the convenience script
+#### Using the Convenience Script
 
 > 🛑🦺 Executing scripts from an untrusted source may result in a
 > broken system configuration as well as security vulnerabilities by installed
@@ -55,13 +55,13 @@ information on the usage and prerequisites
 
 [_External Documentation_](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
 
-#### ✨ Manual install using the package repository
+#### ✨ Manual installation Using the Package Repository
 
-##### Removing old versions of Docker
+##### Removing Old Versions of Docker
 > 🛑 Software depending on the old packages will stop functioning and may not
 > be compatible with the packages published by Docker Inc.
 
-Since this guide will use the most up to date version of Docker, released 
+Since this guide will use the most up-to-date version of Docker, released 
 directly by Docker Inc., the versions deployed over the default repositories
 need to be removed beforehand. To remove them you will need to uninstall the
 following packages:
@@ -78,7 +78,7 @@ the packages:
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do apt-get remove $pkg; done
 ```
 
-##### Adding the new repository
+##### Adding the New Repository
 
 Since now all possibly conflicting packages have been removed, update your
 package index once using the following command:
@@ -102,7 +102,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/
 chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
-Now add the repository to the known repositories of APT
+Now add the repository to the known repositories of APT:
 ```sh
 echo \
   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -111,21 +111,21 @@ echo \
 ```
 
 To activate the repository for installing Docker update the package repository
-one again using:
+once again using:
 ```sh
 apt-get update
 ```
 
-##### Install the packages
+##### Install the Packages
 Now install the Docker Engine and the Compose Plugin
 ```sh
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-🎉 And thats it. Now your server has Docker and Docker Compose installed and
-is ready to run the WISdoM project
+🎉 And that's it. Now your server has Docker and Docker Compose installed and
+is ready to run the WISdoM project.
 
-> Currently the only user allowed to issue `docker` commands is `root`.
+> Currently, the only user allowed to issue `docker` commands is `root`.
 > To allow other users to run `docker` commands without having `sudo`
 > privileges, read the information on the following website:<br/>
 > https://docs.docker.com/engine/install/linux-postinstall
@@ -136,7 +136,7 @@ However, if you are using the desktop variant or used a customized server image
 for the initial installation of the operating system, you might need to install
 `git`.
 
-#### ✨ Installing stable from the official package repositories
+#### ✨ Installing Stable from the Official Package Repositories
 To install `git` from the standard package repositories just run the following
 commands:
 ```sh
@@ -144,7 +144,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
-#### Installing upstream stable from PPA[^1]
+#### Installing Upstream Stable from PPA[^1]
 > 🦺 Packages from PPAs may contain unwanted code and could introduce 
 > vulnerabilities to your system, since the code is not checked by a 3rd-party!
 > 
@@ -152,7 +152,7 @@ sudo apt-get install git
 
 To allow the usage of the very latest stable version of `git` directly built
 from source, you may use the PPA. This is not recommended since using a PPA
-may impact the systems stability.
+may impact the systems' stability.
 
 If you still want to use the latest upstream version, you need to execute the
 following command to add the PPA to the sources that APT uses
@@ -171,7 +171,7 @@ apt-get install git
 Since now all prerequisites are installed the process of getting the latest
 version of WISdoM may start.
 
-### Clone the `deployment` repository
+### Clone the `deployment` Repository
 To clone the repository use the following command. This clones the repository
 using HTTPS.
 
@@ -179,7 +179,7 @@ using HTTPS.
 git clone https://github.com/wisdom-oss/deployment.git
 ```
 
-### Generate a configuration file
+### Generate a Configuration File
 
 > 🛑🦺 Executing scripts from an untrusted source may result in a
 > broken system configuration as well as security vulnerabilities by installed
@@ -196,9 +196,9 @@ bash ./generate_config.sh
 ```
 
 If needed you may edit the generated `wisdom.conf` file using your favorite
-console text editor (e.g `nano`, `vim`)
+console text editor (e.g `nano`, `vim`).
 
-### Configure the Authentification Platform
+### Configure the Authentication Platform
 > 🛑 If the authentication platform is not configured the WISdoM platform 
 > will not work correctly!
 
@@ -211,36 +211,37 @@ docker compose --profile authentik-config up -d
 
 #### Creating the administrative user
 > 🦺 Please use a strong and secure password for the `akadmin` user since this
-> account will be the initial super user on the platform. Should the password
+> account will be the initial superuser on the platform. Should the password
 > be leaked or cracked, an attacker could steal other users credentials or
-> access external user sources
+> access external user sources.
 
-Since the authentification platform does not deploy with a default password you
+Since the authentication platform does not deploy with a default password you
 need to set the initial password for the `akadmin` user.
 
-1. Navigate to the following address: `http://<machine-ip-or-hostame>:9000/if/flow/initial-setup/`
+1. Navigate to the following address: 
+   `http://<machine-ip-or-hostname>:9000/if/flow/initial-setup/`
 
 2. Set a _secure_ password for the `akadmin` user and set an administrators
    email.
 
-#### Updating the OpenID `profile` scope
+#### Updating the OpenID `profile` Scope
 
-Due to the default configuration of the authentification platform, users will
+Due to the default configuration of the authentication platform, users will
 not be assigned to the parent groups they are members of when requesting the
 `profile` scope.
 Since the parent groups may be important for the API requests,
-the definition of the profile scope needs to be updated in the authentification
+the definition of the profile scope needs to be updated in the authentication
 platform.
 
 
 > 🛑 Pay attention when copying the configuration. A typo could result in an
 > inaccessible platform!
 
-1. Navigate to the Administrative UI `http://<machine-ip-or-hostame>:9000/if/admin`
-2. Open the `Cusomization` menu and select the `Property Mappings`
-3. Show the managed mappings by disabling the switch labled `Hide managed mappings`
+1. Navigate to the Administrative UI `http://<machine-ip-or-hostname>:9000/if/admin`
+2. Open the `Customization` menu and select the `Property Mappings`
+3. Show the managed mappings by disabling the switch labeled `Hide managed mappings`
 4. Edit the `authentik default OAuth Mapping: OpenID 'profile` mapping
-5. Replace the current contens of the mapping with the following code and save
+5. Replace the current contents of the mapping with the following code and save
    the changes.
     ```py
     def resolve_parents(group, parentList):
@@ -268,85 +269,85 @@ platform.
     }
     ```
 
-#### Create a OAuth 2.0/OpenID Connect provider and application for the frontend
+#### Create an OAuth 2.0/OpenID Connect Provider and Application for the Frontend
 To allow the frontend to use the authentication platform for logging in,
-a OAuth 2.0/OpenID Connect provider is required.
+an OAuth 2.0/OpenID Connect provider is required.
 Furthermore, an application entry is required to activate the provider and let
-the authentication platform manage access the the application.
+the authentication platform manage access the application.
 
-##### Creating a OAuth 2.0/OpenID Connect provider
+##### Creating a OAuth 2.0/OpenID Connect Provider
 > 🦺 Since the frontend runs in a browser and therefore is considered a public
 > client, make sure to set the client type to `public`.
 
-1. Navigate to the Administrative UI `http://<machine-ip-or-hostame>:9000/if/admin`
+1. Navigate to the Administrative UI `http://<machine-ip-or-hostname>:9000/if/admin`
 2. Open the `Applications` menu and select `Providers`
 3. Select the `OAuth2/Open ID Provider`
 4. Now set the client type as `public` and set the redirect URIs/Origin regex to
    `.*`
 5. Save the new provider
 
-##### Creating a new application entry
+##### Creating a New Application Entry
 
 > 🛑 Make sure to select the correct provider, if there are multiple providers
 > available. If the wrong provider is selected, the platform will generate
-> authentication errors
+> authentication errors.
 
-1. Navigate to the Administrative UI `http://<machine-ip-or-hostame>:9000/if/admin`
+1. Navigate to the Administrative UI `http://<machine-ip-or-hostname>:9000/if/admin`
 2. Open the `Applications` menu and select `Applications`
 3. Create a new application
 4. Set the fields to your own liking
 5. Under the `provider` field, select the just created OAuth 2.0/OpenID Connect 
    provider
 
-##### Updating the platform configuration
+##### Updating the Platform Configuration
 Now the generated client id and open id connect issuer need to be set in the
 platform configuration to allow the frontend to pick up those values during
-the build proccess.
+the build process.
 
-1. Navigate to the Administrative UI `http://<machine-ip-or-hostame>:9000/if/admin`
+1. Navigate to the Administrative UI `http://<machine-ip-or-hostname>:9000/if/admin`
 2. Open the `Applications` menu and select `Providers`
 3. Select the `OAuth2/Open ID Provider`
 4. Open the provider you created in the previous step.
 5. Open the `wisdom.conf` file on the server
-6. Assign the OpenID configuration url displayed in the authentification 
+6. Assign the OpenID configuration url displayed in the authentication 
    platform to the `FRONTEND_OPEN_ID_CONNECT_AUTHORITY` variable
-7. Assign the client id displayed in the authentification platform to the
+7. Assign the client id displayed in the authentication platform to the
    `FRONTEND_OPEN_ID_CONNECT_CLIENT_ID` variable
 
-#### Clean up
+#### Cleanup
 Since now all required configuration steps have been completed the platform
 is ready to be built and hosted on the server. However, some cleanup steps are
 required to stop zombie containers from existing. Since only the 
-authentification platform is currently running, stop it
+authentication platform is currently running, stop it
 
 ```sh
 docker compose --profile authentik-config down
 ```
 
-### Building the microservices and the frontend
+### Building the Microservices and the Frontend
 Since all configuration and cleanup measures have been taken, start to build
 the containers for the WISdoM platform.
 
 > ⌛ Depending on the hardware configuration, the build process may take a
 > long time. Durations of up to 45 minutes have been reported...
 > 
-> _Time to get a coffee and a snack_ ☕🍩
+> _Time to get a coffee and a snack._ ☕🍩
 
 ```sh
 docker compose build
 ```
 
-### Preparing the API gateway
+### Preparing the API Gateway
 Since the API gateway used for the WISdoM platform needs to initialize the
 database before starting it for the first time, run some needed migrations
-and the database bootstrap
+and the database bootstrap:
 ```sh
 docker compose run api-gateway kong migrations bootstrap
 ```
 
-### Start up all containers
+### Start Up All Containers
 After the API gateway has been configured, no further steps are required,
-except of starting up the compose file
+except of starting up the compose file:
 ```sh
 docker compose up -d
 ```
@@ -359,4 +360,3 @@ set up while generating the configuration file.
       available in them. _However, packages installed from them are not from
       official sources any may impact the stability of your system. Use with
       care!_
-    

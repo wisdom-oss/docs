@@ -11,7 +11,15 @@ If you haven't set it up yet, you can follow the steps outlined in the
 [build and customize](building-and-customizing-the-frontend-application.md) 
 guide.
 
-## Getting Started
+## Generating a New WISdoM Module
+
+To generate a new module simply run `npm run gen-wisdom-module`.
+This will generate and modify the necessary files to get started.
+
+It is also possible to generate a module by hand.
+All steps in the manual creation are executed by the script.
+
+## Creating a New Module Manually
 
 ### Generate a New Library
 

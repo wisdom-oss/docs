@@ -82,8 +82,14 @@ pnpm install
 You can build your workspace via the included `build.js` file, run:
 
 ```sh
-node build.js
+npm run build
 ```
+
+> To run the build script you need to set the environment variables:
+> - `OIDC_AUTHORITY`
+> - `OIDC_CLIENT_ID`
+> 
+> These are provided by the [backend](../../backend/deployment.md).
 
 ### Serve the Workspace
 

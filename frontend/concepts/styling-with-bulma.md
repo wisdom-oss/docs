@@ -122,3 +122,68 @@ This helper can be located in the `AppComponent` of the `core`.
 
 In this instance, the dropdown menu will automatically hide when a click is 
 detected outside of it, thanks to the `.is-auto-hide` helper.
+
+## Bulma Calendar
+
+With the Bulma extension [`bulma-calendar`](https://doc.mh-s.de/bulma-calendar/), 
+the standard date inputs can be effortlessly overridden. 
+Specifically, when an `input` tag with a `type` set to `"date"` is used within 
+the scope of the application, the `BulmaCalendarDirective` automatically 
+transforms it into a Bulma Calendar date picker. 
+This ensures a uniform and enhanced date selection interface across the WISdoM 
+application.
+
+The `BulmaCalendarDirective` offers extensive flexibility:
+
+- **Options**:
+  The directive exposes the Bulma Calendar options object as an `@Input`, 
+  enabling direct configurations and customizations from Angular templates.
+
+- **Functions, Setters and Getters**:
+  All available functions, setters, and getters from the Bulma Calendar library 
+  are accessible. 
+  To interact with them, you'd typically use the `@ViewChild` decorator to 
+  obtain a reference to the directive instance from your component's class. 
+  This lets you call methods, set properties, or retrieve values 
+  programmatically.
+
+- **Events**:
+  The Bulma Calendar's events are exposed as `@Output` properties. 
+  This means you can effortlessly bind to these events right in your Angular 
+  templates and execute specific logic when they are triggered.
+
+For a comprehensive overview of all possible interactions, configurations, and 
+event handlers, refer to the documentation for the `BulmaCalendarDirective`.
+
+
+### Example Integration of Bulma Calendar
+
+```html
+<!-- Bulma Calendar with default settings and an event binding -->
+<input type="date" name="appointment" (select)="handleDateSelection()" #myDatePicker>
+
+<!-- Bulma Calendar with customized options -->
+<input type="date" name="appointment" [options]="{ showClearButton: true, dateFormat: 'DD/MM/YYYY' }">
+```
+
+In the Angular component:
+
+```ts
+@ViewChild(BulmaCalendarDirective) 
+datePicker!: BulmaCalendarDirective;
+
+ngAfterViewInit() {
+    // Using a setter to change a property
+    this.datePicker.date = new Date();
+
+    // Using a getter to retrieve a value
+    let selectedDate = this.datePicker.date;
+
+    // Calling a method
+    this.datePicker.show();
+}
+
+handleDateSelection() {
+    console.log("Date selected!");
+}
+```
